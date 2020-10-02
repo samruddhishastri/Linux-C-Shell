@@ -1,0 +1,23 @@
+cd hello
+cd ..
+cd hello
+cd hello
+cd ..
+cd ..
+cd xyz
+emacs &
+emacs & 1.c
+kjob 1 19
+jobs
+emacs & 1.c
+overkill
+
+cd ..
+cd ..
+cd xyz
+emacs &
+emacs & 1.c
+kjob 1 19
+jobs
+emacs & 1.c
+overkill

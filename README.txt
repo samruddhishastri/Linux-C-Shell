@@ -1,5 +1,3 @@
-# C-Shell
-
 Run the Shell:
 
 1. Run the command 'make' followed by ./a.out
