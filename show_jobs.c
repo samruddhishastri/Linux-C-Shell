@@ -8,7 +8,7 @@ void show_jobs(){
 		sprintf(status,"/proc/%d/status", job_arr[i].pid);
 		FILE *f = fopen(status, "r");
 		if(f == NULL){
-			return;
+			continue;
 		}
 		char *line = NULL;
     	size_t len = 0;

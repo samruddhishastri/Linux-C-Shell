@@ -13,15 +13,16 @@ int main(){
 	printf("\n\n\n");
 	
 	prev_directory[0] = '\0';
+	fg_process = -1;
 
 	while(1){
-		fg_process = -1;
-		signal(SIGCHLD, bg_signal);
 		signal(SIGINT, interrupt_signal);
+		signal(SIGCHLD, bg_signal);
 		signal(SIGTSTP, stop_signal);
+		//printf("123\n");
 		prompt(cwd);
+		//printf("456\n");
 		takeinput(cwd);
+		//printf("789\n");
 	}
-
-
 }

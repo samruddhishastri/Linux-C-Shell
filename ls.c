@@ -19,7 +19,7 @@ void longlist_hidden(char a[], char wd[]){
     	return;
     }
 
-    printf("%s\n", a);
+    printf("\033[1;32m%s\033[0m;\n", a);
 
     while((fil = readdir(dir)) != NULL) {
 

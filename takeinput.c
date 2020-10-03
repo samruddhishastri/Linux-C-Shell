@@ -61,11 +61,11 @@ void removespaces(char *arr, int n){
 
 void piping(char command[]){
 	beta = 0;
-	char *token = strtok(command, "|\n");
+	char *token = strtok(command, "|");
 	while(token!=NULL){
 		strcpy(token1[beta], token);
 		beta++;
-		token = strtok(NULL, "|\n");
+		token = strtok(NULL, "|");
 	}
 
 	for(int i=0; i<beta; i++){
@@ -133,7 +133,7 @@ void redirection(char str[]){
 	if(b.output[0]!='\0'){
 		int fd;
 		if(strstr(copy, ">>")==NULL){
-			fd = open(b.output, O_CREAT | O_WRONLY, 0644);
+			fd = open(b.output, O_CREAT | O_WRONLY | O_TRUNC, 0644);
 		}
 		else{
 			fd = open(b.output, O_CREAT | O_WRONLY | O_APPEND, 0644);	
